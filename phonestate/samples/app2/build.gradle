@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-	compile project(':finalurl')
+	compile project(':phonestate')
 }
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION.toInteger()
     buildToolsVersion "${BUILD_TOOLS_VERSION}"
 
-    dexOptions {
-        jumboMode = true
+    defaultConfig {
+        applicationId "tool.phonestate.app2"
     }
 
     sourceSets {

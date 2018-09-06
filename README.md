@@ -1,4 +1,4 @@
 # phonestate
 ```
-compile 'tools.android:phonestate:1.0.1'
+compile 'tools.android:phonestate:1.0.3'
 ```

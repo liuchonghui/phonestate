@@ -1,4 +1,4 @@
-package tool.finalurl.android;
+package tool.phonestate.android;
 
 import android.app.Application;
 import android.content.Context;

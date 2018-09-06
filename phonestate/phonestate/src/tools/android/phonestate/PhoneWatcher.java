@@ -145,6 +145,26 @@ public class PhoneWatcher {
                 } else {
                     onInit(saveState);
                 }
+
+            } catch (Throwable t) {
+            }
+
+        }
+        synchronized (lock) {
+            try {
+                if (mPhoneUsingListener != null) {
+                    if (PhoneState.NOT_IN_USE == saveState) {
+                        mPhoneUsingListener.onNotUse();
+                    } else {
+                        mPhoneUsingListener.onUse(saveState);
+                    }
+                } else {
+                    if (PhoneState.NOT_IN_USE == saveState) {
+                        onNotUse();
+                    } else {
+                        onUse(saveState);
+                    }
+                }
             } catch (Throwable t) {
             }
         }
